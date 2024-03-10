@@ -1,0 +1,55 @@
+/**
+ * Home.css
+ *
+ * @format
+ */
+
+.home {
+  display: flex;
+  flex-direction: column; /* Switch to column for smaller screens */
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Maintain full viewport height */
+}
+
+main {
+  flex: 1; /* Maintain flex properties if applicable */
+  display: flex; /* Maintain flex properties if applicable */
+  flex-direction: column; /* Switch to column for smaller screens */
+  align-items: center; /* Maintain flex properties if applicable */
+  justify-content: center; /* Maintain flex properties if applicable */
+  text-align: center;
+  margin: 0 auto;
+  padding: 1.2rem;
+}
+
+/* Media Queries for Responsiveness */
+
+@media (min-width: 800px) {
+  /* Adjust breakpoint as needed */
+  .home {
+    flex-direction: row; /* Revert to row layout for larger screens */
+  }
+
+  main {
+    flex-direction: row; /* Revert to row layout for larger screens */
+  }
+
+  .quiz-list {
+    width: 75%; /* Adjust container width for larger screens */
+  }
+}
+
+/* Existing Styles for Quiz Container and List */
+
+.quiz-list {
+  display: flex;
+  flex-wrap: wrap; /* Allow cards to wrap to next line if needed */
+  width: 100%; /* Take full width of container */
+  margin: 0 auto; /* Center the list horizontally */
+}
+
+.quiz-list .quiz-card {
+  /* Style each QuizCard within the list */
+  margin: 1rem; /* Add margin between cards */
+}

@@ -1,0 +1,158 @@
+/**
+ * Navbar.css
+ *
+ * @format
+ */
+
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgb(16, 15, 14);
+  z-index: 999;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  height: var(--header-height);
+  margin: 1rem;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.nav__logo {
+  color: rgb(255, 255, 255);
+  font-weight: var(--font-semi-bold);
+  transition: color 0.4s;
+  font-size: 40px;
+}
+
+.nav__toggle,
+.nav__close {
+  font-size: 1.5rem;
+  color: rgb(212, 212, 212);
+  cursor: pointer;
+}
+
+.nav__cta {
+  background-color: var(--first-color);
+  color: var(--title-color);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  padding: 0.75rem 1.5rem;
+}
+
+@media screen and (max-width: 1150px) {
+  .nav__menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    background-color: black;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(20px);
+    width: 80%;
+    height: 100%;
+    padding: 5rem 4px 0;
+    transition: right 0.5s;
+  }
+}
+@media screen and (max-width: 300px) {
+  .nav__menu {
+    padding: 5rem 1rem 2rem;
+  }
+
+  .nav__list {
+    row-gap: 2rem;
+  }
+
+  .nav__link,
+  .nav__cta {
+    font-size: var(--smaller-font-size);
+  }
+
+  .nav__cta {
+    padding: 10px 16px;
+    font-size: 12px;
+    margin-top: 1rem;
+    width: auto;
+    white-space: nowrap;
+  }
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.5rem;
+}
+
+.nav__link {
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+  transition: color 0.5s;
+  font-size: x-large;
+}
+
+.nav__link:hover {
+  color: blue;
+}
+
+.nav__close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.show-menu {
+  right: 0;
+}
+.nav__listt {
+  display: flex;
+  flex-direction: row;
+  column-gap: 2.5rem;
+}
+
+.nav__menu_mobile {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  background-color: hsla(0, 0%, 6%, 0.2);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  width: 80%;
+  height: 100%;
+  padding: 6rem 3rem 0;
+  transition: right 0.4s;
+}
+@media screen and (min-width: 1150px) {
+  .nav {
+    height: calc(var(--header-height) + 1rem);
+  }
+  .nav__toggle,
+  .nav__close {
+    display: none;
+  }
+
+  .nav__list {
+    flex-direction: row;
+    column-gap: 2.5rem;
+    margin-left: auto;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  color: rgb(244, 244, 244);
+  list-style: none;
+  font-size: large;
+  font-weight: 20px;
+  padding: 10px;
+}
