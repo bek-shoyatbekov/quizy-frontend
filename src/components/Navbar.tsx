@@ -9,7 +9,6 @@ import useAuthStore from "../contexts/auth/AuthStore";
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
   const { user, removeUser } = useAuthStore.getState();
-
   const toggleMenu = () => {
     setShowMenu(!showMenu);
   };

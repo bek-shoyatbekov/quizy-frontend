@@ -38,6 +38,7 @@ const Login = () => {
       await ApiLogin(userToken, "login");
       toast.success("Logged in successfully", { autoClose: 1000 });
       navigate("/");
+      window.location.reload();
     } catch (err) {
       const errorMsg = handleError(err);
       toast.error(errorMsg);
@@ -58,6 +59,7 @@ const Login = () => {
       await ApiLogin(userToken, "signup");
       toast.success("Signed up successfully", { autoClose: 1000 });
       navigate("/");
+      window.location.reload();
     } catch (err) {
       const errorMsg = handleError(err);
       toast.error(errorMsg);
