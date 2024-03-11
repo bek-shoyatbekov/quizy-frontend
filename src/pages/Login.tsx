@@ -41,7 +41,7 @@ const Login = () => {
       window.location.reload();
     } catch (err) {
       const errorMsg = handleError(err);
-      toast.error(errorMsg);
+      toast.error(errorMsg, { autoClose: 1000 });
     }
   };
 
@@ -62,7 +62,7 @@ const Login = () => {
       window.location.reload();
     } catch (err) {
       const errorMsg = handleError(err);
-      toast.error(errorMsg);
+      toast.error(errorMsg, { autoClose: 1000 });
     }
   };
 
