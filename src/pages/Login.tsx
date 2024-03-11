@@ -36,7 +36,7 @@ const Login = () => {
         username: username,
       });
       await ApiLogin(userToken, "login");
-      toast.success("Logged in successfully");
+      toast.success("Logged in successfully", { autoClose: 1000 });
       navigate("/");
     } catch (err) {
       const errorMsg = handleError(err);
@@ -56,7 +56,7 @@ const Login = () => {
       setToken(userToken);
       addUser({ username, email, password, token: token || userToken });
       await ApiLogin(userToken, "signup");
-      toast.success("Signed up successfully");
+      toast.success("Signed up successfully", { autoClose: 1000 });
       navigate("/");
     } catch (err) {
       const errorMsg = handleError(err);
@@ -115,7 +115,8 @@ const Login = () => {
             <button
               type="submit"
               className="submit-button"
-              onClick={isLogin ? login : signup}>
+              onClick={isLogin ? login : signup}
+            >
               {isLogin ? "Login" : "Signup"}
             </button>
           </div>
@@ -124,7 +125,8 @@ const Login = () => {
             <button
               className="signup-button"
               type="button"
-              onClick={() => setIsLogin(!isLogin)}>
+              onClick={() => setIsLogin(!isLogin)}
+            >
               {!isLogin ? "Login" : "Signup"}
             </button>
           </div>
