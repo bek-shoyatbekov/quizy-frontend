@@ -23,7 +23,7 @@
   }
 
   .login-form {
-    max-width: 80%; /* Adjust form width for smaller screens */
+    max-width: 90%; /* Adjust form width for smaller screens */
     padding: 2rem; /* Reduce padding for better layout on mobile */
   }
 

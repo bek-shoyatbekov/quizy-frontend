@@ -1,6 +1,11 @@
 /** @format */
 
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 
 import Home from "./pages/Home";
 import "./App.css";
@@ -27,6 +32,7 @@ function App() {
             <Route path="" element={<QuestionView />} />
           </Route>
           <Route path="/quiz/results" element={<ResultsView />} />
+          <Route path="*" element={<Navigate to="/" replace={true} />} />
         </Routes>
       </main>
     </Router>
