@@ -155,10 +155,7 @@ const AddQuiz = () => {
                   type="number"
                   value={question.timeLimit}
                   onChange={(event) =>
-                    handleTimeLimitChange(
-                      index,
-                      parseInt(event.target.value, 10)
-                    )
+                    handleTimeLimitChange(index, +event.target.value)
                   }
                 />
               </label>
@@ -170,10 +167,7 @@ const AddQuiz = () => {
                   type="number"
                   value={question.correctAnswer}
                   onChange={(event) =>
-                    handleCorrectAnswerChange(
-                      index,
-                      parseInt(event.target.value, 10)
-                    )
+                    handleCorrectAnswerChange(index, +event.target.value)
                   }
                 />
               </label>
