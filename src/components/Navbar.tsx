@@ -1,7 +1,7 @@
 /** @format */
 
 import "./Navbar.css";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { IoClose, IoMenu } from "react-icons/io5";
 import { useState } from "react";
 import useAuthStore from "../contexts/auth/AuthStore";
