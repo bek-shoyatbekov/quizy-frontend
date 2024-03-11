@@ -6,10 +6,8 @@ import {
   Route,
   Navigate,
 } from "react-router-dom";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { Analytics } from "@vercel/analytics/react";
 
 import Home from "./pages/Home";
 import "./App.css";
@@ -37,8 +35,6 @@ function App() {
           <Route path="*" element={<Navigate to="/" replace={true} />} />
         </Routes>
       </main>
-      <SpeedInsights />
-      <Analytics />
     </Router>
   );
 }
