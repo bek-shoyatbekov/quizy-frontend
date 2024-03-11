@@ -1,9 +1,10 @@
 /** @format */
 
 import axios from "axios";
+import configs from "../configs";
 
 const api = axios.create({
-  baseURL: "http://localhost:5000/api/v1",
+  baseURL: configs.api.baseUrl + "/api/v1",
 });
 
 export default api;
