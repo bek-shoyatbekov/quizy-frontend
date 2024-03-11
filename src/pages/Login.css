@@ -15,6 +15,29 @@
   margin-top: -2%;
 }
 
+/* Responsive Styles */
+
+@media (max-width: 768px) {
+  .login-container {
+    max-width: 100%; /* Set max-width to 100% for smaller screens */
+  }
+
+  .login-form {
+    max-width: 80%; /* Adjust form width for smaller screens */
+    padding: 2rem; /* Reduce padding for better layout on mobile */
+  }
+
+  .form-label {
+    font-size: 0.8rem; /* Adjust label size for better readability */
+  }
+
+  .form-input {
+    font-size: 0.9rem; /* Adjust input size for better readability */
+  }
+}
+
+/* Login Form Styles */
+
 .login-form {
   width: 100%;
   max-width: 400px;
