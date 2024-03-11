@@ -95,6 +95,7 @@ const AddQuiz = () => {
       await addQuiz(quiz, user?.token as string);
 
       toast.success("Quiz submitted successfully");
+      navigate("/");
     } catch (err) {
       console.error("Failed to submit quiz:", err);
       const errMessage = handleError(err);
